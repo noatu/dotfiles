@@ -1,0 +1,23 @@
+[init]
+    defaultBranch = main
+[diff]
+    tool = nvimdiff
+[core]
+    editor = nvim
+    ; repositoryformatversion = 1
+; [extensions]
+    ; objectformat = sha256
+[log]
+    showSignature = true
+    abbrevCommit = true
+[gpg "ssh"]
+    allowedSignersFile = ~/.config/git/allowed_signers
+
+[includeIf "gitdir:~/src/"]
+    path = ~/src/.gitconfig
+
+; [filter "lfs"]
+; 	required = true
+; 	clean = git-lfs clean -- %f
+; 	smudge = git-lfs smudge -- %f
+; 	process = git-lfs filter-process

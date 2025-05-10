@@ -1,0 +1,30 @@
+"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+
+[manager]
+ratio = [0, 2, 3] # prev, current, next / preview
+sort_by = "natural" # 1.md < 2.md < 10.md
+# sort_translit = false # replaces Â as A, Æ as AE, etc.
+linemode = "mtime"
+scrolloff = 5
+# mouse_events = ["click", "scroll"] # plugin stuff
+title_format = "Yazi: {cwd}"
+
+[preview]
+wrap = "no"
+tab_size = 8
+max_width = 1024
+max_height = 1024
+cache_dir = "~/.cache/yazi/"
+image_delay = 0
+# image_filter = "triangle"
+# image_quality = 75
+
+# [tasks]
+# suppress_preload = false
+# image_alloc = 536870912  # 512MB
+
+[input]
+cursor_blink = true
+
+[which]
+sort_by = "key"

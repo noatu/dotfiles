@@ -1,0 +1,57 @@
+/*
+
+!/.gitignore
+
+!/.gnupg/
+/.gnupg/*
+!/.gnupg/*.conf
+
+# sloppy
+!/.local/
+/.local/*
+!/.local/share/
+/.local/share/*
+!/.local/share/cargo/
+/.local/share/cargo/*
+!/.local/share/cargo/config.toml
+
+!/.config/
+/.config/*
+
+# CLI / TUI
+!.config/gdu/
+!.config/fish/
+!.config/paru/
+!.config/htop/
+
+!.config/yazi/
+.config/yazi/*/
+
+!.config/git/
+.config/git/*
+!.config/git/config
+
+!.config/nvim/
+.config/nvim/*
+!.config/nvim/lua/
+!.config/nvim/README.md
+!.config/nvim/lazy-lock.json
+
+# GUI
+!.config/hypr/
+!.config/mako/
+!.config/kitty/
+!.config/waybar/
+
+# Media
+!.config/mpv/
+!.config/pipewire/
+!.config/speech-dispatcher/
+
+# Misc
+# !.config/user-dirs.locale
+!.config/logseq-flags.conf
+
+!/.config/tridactyl/
+/.config/tridactyl/*
+!.config/tridactyl/tridactylrc

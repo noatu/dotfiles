@@ -1,0 +1,88 @@
+" Colemak experience:
+"       UNBINDS
+unbind [c
+unbind ]c
+unbind ;m
+unbind ;M
+unbind --mode=visual j
+unbind --mode=visual =
+unbind <C-f>
+unbind <C-b>
+"       NORMAL
+bind e scrollline  8
+bind i scrollline -8
+bind n scrollpx   -50
+bind o scrollpx    50
+bind E forward
+bind I back
+bind N tabprev
+bind O tabnext
+bind k fillcmdline open
+bind K current_url open
+bind D tabclose #
+bind ' gobble 1 markjump
+bind }} urlincrement  1
+bind {{ urlincrement -1
+bind <C-r> reader
+bind <C-e> scrollline 1
+bind <C-y> scrollline -1 
+"       VISUAL
+bind --mode=visual e js document.getSelection().modify("extend","forward","line")
+bind --mode=visual i js document.getSelection().modify("extend","backward","line")
+bind --mode=visual n js document.getSelection().modify("extend","backward","character")
+bind --mode=visual o js document.getSelection().modify("extend","forward","character")
+bind --mode=visual l js document.getSelection().modify("extend","forward","word")
+bind --mode=visual h js tri.visual.reverseSelection(document.getSelection())
+bind --mode=visual <Tab> js let n = document.getSelection().anchorNode; let p = n.parentNode; if (p) { p.prev = n; let s = window.getSelection(); s.removeAllRanges(); let r = document.createRange(); r.selectNodeContents(p); s.addRange(r) }
+bind --mode=visual <S-Tab> js let p = document.getSelection().anchorNode.prev; let s = window.getSelection(); s.removeAllRanges(); if (p) { let r = document.createRange(); r.selectNodeContents(p); s.addRange(r) }
+bind --mode=visual k fillcmdline open
+"       ADDITIONAL
+bind ge editor
+bind --mode=input <C-e> editor
+bind ;l hint -JFc img i => tri.excmds.open('https://lens.google.com/uploadbyurl?url='+i.src)
+bind ;L hint -JFc img i => tri.excmds.tabopen('https://lens.google.com/uploadbyurl?url='+i.src)
+
+bind j fillcmdline hint -f
+bind J fillcmdline hint -fb
+bind / fillcmdline find
+bind ? fillcmdline find --reverse
+bind l findnext --search-from-view
+bind L findnext --search-from-view --reverse
+bind gn findselect
+bind gN composite findnext --search-from-view --reverse; findselect
+bind <C-[> composite mode normal; hidecmdline; nohlsearch
+bind <Escape> composite mode normal; hidecmdline; nohlsearch
+
+bind h composite set hintautoselect true;  set hintfiltermode simple; set hintchars arstfwneiouykv; reset f; reset F
+bind H composite set hintautoselect false; set hintfiltermode vimperator-reflow; set hintchars 4328901576; lang_f; lang_F
+
+"       ALIASES
+command map bind
+command lang_f bind f composite set keyboardlayoutforce false; hint;    set keyboardlayoutforce true
+command lang_F bind F composite set keyboardlayoutforce false; hint -b; set keyboardlayoutforce true
+
+
+" Settings:
+"       FEEL
+set newtab about:blank
+set modeindicatorshowkeys true
+set smoothscroll true
+set scrollduration 75
+set modeindicatormodes {"normal":"true","insert":"true","input":"true","ignore":"false","ex":"true","hint":"true","visual":"true"}
+"       BEHAVIOUR
+set editorcmd kitty nvim
+keyfeed h
+set hintdelay 0
+set keyboardlayoutforce true
+set keyboardlayoutoverrides {"KeyE":["f","F"],"KeyR":["p","P"],"KeyT":["g","G"],"KeyY":["j","J"],"KeyU":["l","L"],"KeyI":["u","U"],"KeyO":["y","Y"],"KeyP":[";",":"],"KeyS":["r","R"],"KeyD":["s","S"],"KeyF":["t","T"],"KeyG":["d","D"],"KeyJ":["n","N"],"KeyK":["e","E"],"KeyL":["i","I"],"KeyN":["k","K"],"Semicolon":["o","O"]}
+"       URLS
+blacklistadd https://typst.app/
+blacklistadd https://monkeytype.com/
+blacklistadd https://play.rust-lang.org
+blacklistadd https://leetcode.com/problems/
+
+setnull searchurls
+set searchurls {"d":"https://duckduckgo.com/?q=","q":"https://www.qwant.com/?q=","g":"https://www.google.com/search?q=","s":"https://startpage.com/do/search?q=","sx":"https://searx.org/search?q=","sn":"https://searx.neocities.org/?q=","so":"https://stackoverflow.com/search?q=","r":"https://www.reddit.com/search/?q=","y":"https://www.youtube.com/results?search_query=","gh":"https://github.com/search?q=","osm":"https://www.openstreetmap.org/search?query=","w":"https://en.wikipedia.org/wiki/Special:Search/","gw":"https://wiki.gentoo.org/index.php?title=Special:Search&profile=default&search=","aw":"https://wiki.archlinux.org/index.php?title=Special:Search&search="}
+
+" fillcmdline_tmp 2000 Sourced successfully!
+" vim: ft=vim
