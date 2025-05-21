@@ -38,9 +38,9 @@ end
 abbr s -f __ssh_kitten
 
 function __multidot --description 'Use .... instead of ../../../'
-    string repeat -n (math (string length -- $argv) - 1) ../
+    echo -ns (string repeat -n (math (string length -- $argv) - 1) ../) %
 end
-abbr multidot -r '\.\.\.+$' -p anywhere -f __multidot
+abbr multidot -r '\.\.\.+$' -p anywhere --set-cursor -f __multidot
 
 function __multicd; echo cd (__multidot $argv); end
-abbr multicd -r '^\.\.+$' -f __multicd
+abbr multicd -r '^\.\.+$' --set-cursor -f __multicd

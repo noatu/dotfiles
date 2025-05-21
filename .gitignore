@@ -34,6 +34,7 @@
 !.config/nvim/
 .config/nvim/*
 !.config/nvim/lua/
+!.config/nvim/after
 !.config/nvim/README.md
 !.config/nvim/lazy-lock.json
 
@@ -42,6 +43,7 @@
 !.config/mako/
 !.config/kitty/
 !.config/waybar/
+!.config/gf2_config.ini
 
 # Media
 !.config/mpv/
