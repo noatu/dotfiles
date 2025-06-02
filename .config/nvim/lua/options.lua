@@ -25,7 +25,7 @@ o.mouse              = "a"
 o.spell              = false
 o.spelllang          = "en_us,uk"
 o.spelloptions       = "camel"
-o.fileencodings      = "utf-8,cp1251,cp866"
+-- o.fileencodings      = "utf-8,cp1251,cp866"
 --o.clipboard = "unnamed"plus?
 o.iskeyword:append "-" -- is part of the word
 o.formatoptions:append "n" -- indents for numbered lists

@@ -17,5 +17,11 @@ vim.api.nvim_create_autocmd("LspAttach", {                   -- Overrides the de
         vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buffer = args.buf })
     end
 })
+
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+    pattern = { "*" },
+    callback = function() vim.o.bomb = (vim.o.fileencoding == "utf-16" or vim.o.fileencoding == "utf-16le") end
+})
+
 --vim.api.nvim_create_autocmd("CursorHold",  { callback = lsp.document_highlight })
 --vim.api.nvim_create_autocmd("CursorMoved", { callback = lsp.clear_references })

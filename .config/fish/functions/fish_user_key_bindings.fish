@@ -6,7 +6,7 @@ function fish_user_key_bindings
         if functions -q fzf_key_bindings
             fzf_key_bindings
         else
-            echo 'WARNING: using `fzf --fish | source`'
+            echo (set_color bryellow)'WARNING: using `fzf --fish | source`'
             command fzf --fish | source
         end
         functions -e bind
@@ -21,7 +21,7 @@ function fish_user_key_bindings
         bind            ctrl-f fzf-history-widget
         bind -M insert  ctrl-f fzf-history-widget
     else
-        echo 'INFO: fzf not found'
+        echo (set_color brcyan )'INFO: fzf not found'
     end
 
     # Unused: alt-z, insert ctrl-r
