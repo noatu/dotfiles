@@ -1,4 +1,4 @@
-vim.lsp.config('harper_ls', {
+return {
     settings = {                   -- https://writewithharper.com/docs/integrations/neovim
         ["harper-ls"] = {
             isolateEnglish = true, -- highly experimental
@@ -16,4 +16,4 @@ vim.lsp.config('harper_ls', {
             -- }
         }
     },
-})
+}

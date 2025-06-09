@@ -1,8 +1,8 @@
-vim.lsp.config('yamlls', {
+return {
     settings = {
         yaml = {
             format = { enable = true },
             schemaStore = { enable = true },
         }
     }
-})
+}

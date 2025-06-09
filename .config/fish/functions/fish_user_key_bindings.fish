@@ -21,7 +21,7 @@ function fish_user_key_bindings
         bind            ctrl-f fzf-history-widget
         bind -M insert  ctrl-f fzf-history-widget
     else
-        echo (set_color brcyan )'INFO: fzf not found'
+        echo (set_color brcyan)'INFO: fzf not found'
     end
 
     # Unused: alt-z, insert ctrl-r
