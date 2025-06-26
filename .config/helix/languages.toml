@@ -1,0 +1,23 @@
+[language-server.taplo]
+config = {} # https://github.com/helix-editor/helix/issues/3897
+
+[language-server.rust-analyzer]
+checkOnSave = true
+cargo = { allFeatures = true, loadOutDirsFromCheck = true, runBuildScripts = true }
+
+check.command = "clippy"
+check.extraArgs = [ "--",
+    "--no-deps",
+    "-Wclippy::correctness",
+    "-Wclippy::complexity",
+    "-Wclippy::suspicious",
+    "-Wclippy::style",
+    "-Wclippy::perf",
+    "-Wclippy::pedantic",
+    "-Wclippy::nursery",
+    "-Wclippy::cargo",
+    "-Aclippy::restriction",
+    "-Aclippy::must_use_candidate",
+]
+procMacro.enable = true
+

@@ -1,0 +1,46 @@
+theme = "ao"
+
+[editor]
+# no you don't
+mouse = false
+middle-click-paste = false
+scroll-lines = 0
+
+shell = ["fish", "-c"]
+line-number = "relative"
+cursorline = true
+continue-comments = false # annoying
+gutters = ["diagnostics", "line-numbers", "diff"]
+auto-completion = true # TODO: is it annoying?
+completion-replace = true
+auto-format = true
+auto-info = true # TODO: idle-timeout?
+# true-color = true
+rulers = [80, 100]
+bufferline = "multiple" # never, always, multiple
+color-modes = true # mode indicator color
+insert-final-newline = true # POSIX compatibility
+popup-border = "none" # popup, menu, all, none
+jump-label-alphabet = "tneiouykhsrafwvd"
+end-of-line-diagnostics = "disable" # TODO: check `inline-diagnostics`
+
+# file-picker.hidden = true
+cursor-shape.insert = "underline"
+
+[editor.statusline.mode]
+normal = "N"
+insert = "I"
+select = "S"
+
+[keys.normal]
+# "<space>=" = ":format"
+D = [ "extend_to_line_end", "delete_selection" ]
+
+# previous/next buffer
+L = "goto_next_buffer"
+H = "goto_previous_buffer"
+# move/copy line below/above
+"A-j" = [ "extend_to_line_bounds", "delete_selection", "paste_after" ]
+"A-k" = [ "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before" ]
+"A-J" = [ "extend_to_line_bounds", "yank", "paste_after" ]
+"A-K" = [ "extend_to_line_bounds", "yank", "paste_before" ]

@@ -1,6 +1,6 @@
 "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
-[manager]
+[mgr]
 ratio = [0, 2, 3] # prev, current, next / preview
 sort_by = "natural" # 1.md < 2.md < 10.md
 # sort_translit = false # replaces Â as A, Æ as AE, etc.
