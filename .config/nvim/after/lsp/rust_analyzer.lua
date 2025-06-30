@@ -2,14 +2,14 @@ return {
     settings = {
         ["rust-analyzer"] = {
             cargo       = {
-                allFeatures = true,
+                features = "all",
                 loadOutDirsFromCheck = true,
                 runBuildScripts = true,
             },
             -- Add clippy lints for Rust.
             checkOnSave = true,
             check       = {
-                -- allFeatures = true,
+                features = "all",
                 command = "clippy",
                 extraArgs = {
                     "--",

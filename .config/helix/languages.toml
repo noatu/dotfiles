@@ -1,23 +1,65 @@
+[[language]]
+name = "markdown"
+[language.auto-pairs]
+'_' = '_'
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+"'" = "'"
+'`' = '`'
+# '<' = '>'
+
+[[language]]
+name = "lua"
+auto-format = false
+
+[[language]]
+name = "toml"
+auto-format = true
+
+
 [language-server.taplo]
 config = {} # https://github.com/helix-editor/helix/issues/3897
 
-[language-server.rust-analyzer]
-checkOnSave = true
-cargo = { allFeatures = true, loadOutDirsFromCheck = true, runBuildScripts = true }
 
-check.command = "clippy"
-check.extraArgs = [ "--",
-    "--no-deps",
-    "-Wclippy::correctness",
-    "-Wclippy::complexity",
-    "-Wclippy::suspicious",
-    "-Wclippy::style",
-    "-Wclippy::perf",
-    "-Wclippy::pedantic",
-    "-Wclippy::nursery",
-    "-Wclippy::cargo",
-    "-Aclippy::restriction",
-    "-Aclippy::must_use_candidate",
-]
+[language-server.tinymist.config]
+formatterPrintWidth = 100  # can't stand 120
+formatterMode = "typstyle" # or typstfmt
+exportPdf = "onSave"       # "onDocumentHasTitle", # default: never
+semanticTokens = "enable"
+
+
+# [language-server.tinymist.nil]
+# formatting.command = "alejandra"
+
+
+[language-server.rust-analyzer.config]
+checkOnSave = true
 procMacro.enable = true
 
+[language-server.rust-analyzer.config.cargo]
+features = "all"
+loadOutDirsFromCheck = true
+runBuildScripts = true
+
+[language-server.rust-analyzer.config.check]
+features = "all"
+command = "clippy"
+extraArgs = [
+  "--",
+  "--no-deps", # run Clippy only on the given crate
+  # Deny, Warn, Allow, Forbid
+  "-Wclippy::correctness", # code that is outright wrong or useless
+  "-Wclippy::complexity",  # code that does something simple but in a complex way
+  "-Wclippy::suspicious",  # code that is most likely wrong or useless
+  "-Wclippy::style",       # code that should be written in a more idiomatic way
+  "-Wclippy::perf",        # code that can be written to run faster
+  "-Wclippy::pedantic",    # lints which are rather strict or have occasional false positives
+  "-Wclippy::nursery",     # new lints that are still under development
+  "-Wclippy::cargo",       # lints for the cargo manifest
+  # Use in production
+  "-Aclippy::restriction", # lints which prevent the use of language and library features
+  # Other
+  "-Aclippy::must_use_candidate", # must_use is rather annoing
+]
