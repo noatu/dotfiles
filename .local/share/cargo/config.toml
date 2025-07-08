@@ -2,6 +2,9 @@
 rustc-wrapper = "sccache"
 rustflags = ["-Z", "threads=8"]
 
+[profile.release]
+lto = true
+
 [unstable]
 codegen-backend = true
 

@@ -19,8 +19,10 @@ name = "toml"
 auto-format = true
 
 
-[language-server.taplo]
-config = {} # https://github.com/helix-editor/helix/issues/3897
+# TODO: still aligns
+[language-server.taplo.config]
+alignComments = false
+align_comments = false
 
 
 [language-server.tinymist.config]
@@ -30,7 +32,7 @@ exportPdf = "onSave"       # "onDocumentHasTitle", # default: never
 semanticTokens = "enable"
 
 
-# [language-server.tinymist.nil]
+# [language-server.nil]
 # formatting.command = "alejandra"
 
 

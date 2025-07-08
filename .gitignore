@@ -32,8 +32,6 @@
 !.config/git/config
 
 !.config/helix/
-.config/helix/*
-!.config/helix/*.toml
 
 !.config/nvim/
 .config/nvim/*

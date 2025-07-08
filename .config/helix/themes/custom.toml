@@ -1,0 +1,9 @@
+inherits = "carbonfox"
+
+warning = "magenta"
+error = "red"
+info = "blue"
+hint = "orange"
+
+# ui.background = {}
+# ui.gutter = {}
