@@ -20,7 +20,7 @@ rulers = [80, 100]
 bufferline = "multiple"                  # never, always, multiple
 color-modes = false                      # mode indicator color
 insert-final-newline = true              # POSIX lines finish with \n
-popup-border = "none"                    # popup, menu, all, none
+popup-border = "all"                     # popup, menu, all, none
 jump-label-alphabet = "tneiouykhsrafwvd"
 end-of-line-diagnostics = "hint"         # disable, error, warning, info, hint
 
@@ -106,25 +106,27 @@ x = "extend_line"
 tab = "extend_parent_node_end"
 S-tab = "extend_parent_node_start"
 ";" = ["collapse_selection", "normal_mode"]
-V = "extend_to_line_end"
+
+V = ["extend_to_line_bounds", "trim_selections"]
+D = ["ensure_selections_forward", "extend_to_line_end"]
 
 [keys.normal]
 x = "extend_line"
 "=" = ":format"
 "A-=" = "format_selections"
 
-C-space = "signature_help"
-space.'.' = ":config-reload"
-
-tab = "move_parent_node_end"
-S-tab = "move_parent_node_start"
-
-V = ["goto_first_nonwhitespace", "extend_to_line_end"]
+V = ["extend_to_line_bounds", "trim_selections"]
 D = ["ensure_selections_forward", "extend_to_line_end"]
 
 L = "goto_next_buffer"
 H = "goto_previous_buffer"
 
+C-space = "signature_help"
+
+tab = "move_parent_node_end"
+S-tab = "move_parent_node_start"
+
+# C-q = "wclose"
 C-k = "jump_view_up"
 C-h = "jump_view_left"
 C-j = "jump_view_down"
@@ -140,6 +142,14 @@ A-k = [
 A-J = ["extend_to_line_bounds", "yank", "paste_after"]
 A-K = ["extend_to_line_bounds", "yank", "paste_before"]
 
+[keys.normal.space]
+'.' = ":config-reload"
+e = ":reload"
+E = ":reload-all"
+q = ":buffer-close"
+Q = ":buffer-close-all"
+o = ":buffer-close-others"
+n = "file_picker_in_current_buffer_directory"
 
 # Toggle
 [keys.normal.space.t]

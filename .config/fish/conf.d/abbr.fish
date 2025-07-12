@@ -2,13 +2,13 @@ status is-interactive; or return
 
 status is-login; and abbr H Hyprland
 
-abbr l la
 abbr m mkdir
 abbr o open
 abbr t trash
 # abbr m mpv
 abbr mm -- mpv --shuffle \$XDG_MUSIC_DIR
 
+abbr l lazygit
 abbr g git
 # abbr dots -- git --git-dir \~/.dotfiles/ --work-tree \~
 abbr gl git log
@@ -18,8 +18,9 @@ abbr gs git status
 abbr gcl git clone
 abbr gco git checkout
 
-
-function __last_hist_item; printf $history[1]; end
+function __last_hist_item
+    printf $history[1]
+end
 abbr !! -p anywhere -f __last_hist_item
 
 function __find_editor --description 'Edit with edit-in-kitty when in ssh'
@@ -42,5 +43,7 @@ function __multidot --description 'Use .... instead of ../../../'
 end
 abbr multidot -r '\.\.\.+$' -p anywhere --set-cursor -f __multidot
 
-function __multicd; echo cd (__multidot $argv); end
+function __multicd
+    echo cd (__multidot $argv)
+end
 abbr multicd -r '^\.\.+$' --set-cursor -f __multicd
