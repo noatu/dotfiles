@@ -4,7 +4,7 @@ status is-login; and abbr H Hyprland
 
 abbr m mkdir
 abbr o open
-abbr t trash
+abbr t trash put
 # abbr m mpv
 abbr mm -- mpv --shuffle \$XDG_MUSIC_DIR
 

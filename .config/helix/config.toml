@@ -1,10 +1,9 @@
 theme = "custom" # monokai_soda, kaolin-valley-dark, material_deep_ocean, carbonfox
 
 [editor]
-# no you don't
-mouse = false
-middle-click-paste = false
-scroll-lines = 0
+# mouse = false
+# middle-click-paste = false
+# scroll-lines = 0
 
 shell = ["fish", "-c"]
 line-number = "relative"
@@ -34,8 +33,6 @@ max-diagnostics = 5     # 10
 mode = { normal = "N", insert = "I", select = "S" }
 left = [
   "mode",
-  "spinner",
-  "version-control",
   "file-name",
   "read-only-indicator",
   "file-modification-indicator",
@@ -44,9 +41,12 @@ left = [
   "file-encoding",
 ]
 right = [
-  "register",
+  "spinner",
+  "spacer",
   "diagnostics",
   "workspace-diagnostics",
+  "version-control",
+  "register",
   "selections",
   "primary-selection-length",
   "position",
@@ -97,6 +97,7 @@ wrap-indicator = "↪"
 
 
 [keys.insert]
+A-tab = "insert_tab"
 C-space = "signature_help"
 S-tab = "move_parent_node_start"
 
@@ -105,7 +106,16 @@ x = "extend_line"
 # a = ["append_mode", "collapse_selection"]
 tab = "extend_parent_node_end"
 S-tab = "extend_parent_node_start"
+A-tab = "insert_tab"
 ";" = ["collapse_selection", "normal_mode"]
+
+L = "goto_next_buffer"
+H = "goto_previous_buffer"
+
+C-k = "jump_view_up"
+C-h = "jump_view_left"
+C-j = "jump_view_down"
+C-l = "jump_view_right"
 
 V = ["extend_to_line_bounds", "trim_selections"]
 D = ["ensure_selections_forward", "extend_to_line_end"]
@@ -115,22 +125,23 @@ x = "extend_line"
 "=" = ":format"
 "A-=" = "format_selections"
 
-V = ["extend_to_line_bounds", "trim_selections"]
-D = ["ensure_selections_forward", "extend_to_line_end"]
-
 L = "goto_next_buffer"
 H = "goto_previous_buffer"
-
-C-space = "signature_help"
-
-tab = "move_parent_node_end"
-S-tab = "move_parent_node_start"
 
 # C-q = "wclose"
 C-k = "jump_view_up"
 C-h = "jump_view_left"
 C-j = "jump_view_down"
 C-l = "jump_view_right"
+
+V = ["extend_to_line_bounds", "trim_selections"]
+D = ["ensure_selections_forward", "extend_to_line_end"]
+
+C-space = "signature_help"
+
+tab = "move_parent_node_end"
+S-tab = "move_parent_node_start"
+A-tab = "insert_tab"
 
 A-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 A-k = [
@@ -139,13 +150,13 @@ A-k = [
   "move_line_up",
   "paste_before",
 ]
-A-J = ["extend_to_line_bounds", "yank", "paste_after"]
-A-K = ["extend_to_line_bounds", "yank", "paste_before"]
+# A-J = ["extend_to_line_bounds", "yank", "paste_after"]
+A-K = ["extend_to_line_bounds", "yank", "paste_after"]
 
 [keys.normal.space]
 '.' = ":config-reload"
-e = ":reload"
-E = ":reload-all"
+i = ":reload"
+I = ":reload-all"
 q = ":buffer-close"
 Q = ":buffer-close-all"
 o = ":buffer-close-others"
@@ -166,8 +177,8 @@ R = ":set-option rulers [80,100]"
 g = ":toggle indent-guides.render"
 i = ":toggle lsp.display-inlay-hints"
 e = ":toggle end-of-line-diagnostics disable hint"
-d = ":toggle inline-diagnostics.other-lines disable error"
-D = ":toggle inline-diagnostics.cursor-line disable warning"
+d = ":toggle inline-diagnostics.cursor-line disable warning"
+D = ":toggle inline-diagnostics.other-lines disable error"
 
 z = [ # TODO: not work
   ":set-option cursorline true",

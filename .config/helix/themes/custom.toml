@@ -5,5 +5,13 @@ error = "red"
 info = "blue"
 hint = "orange"
 
+"comment.block.documentation" = { fg = "comment", modifiers = [
+  "dim", # hard to distinguish otherwise
+] } # Block doc comments, e.g '/** */' in rust.
+"comment.line.documentation" = { fg = "comment", modifiers = [
+  "italic",
+] } # Line doc comments, e.g '///' in rust.
+
+
 # ui.background = {}
 # ui.gutter = {}
