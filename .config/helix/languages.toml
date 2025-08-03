@@ -39,11 +39,11 @@ semanticTokens = "enable"
 [language-server.rust-analyzer.config]
 checkOnSave = true
 procMacro.enable = true
+cargo.features = "all"
 
-[language-server.rust-analyzer.config.cargo]
-features = "all"
-loadOutDirsFromCheck = true
-runBuildScripts = true
+# [language-server.rust-analyzer.config.cargo]
+# loadOutDirsFromCheck = true
+# runBuildScripts = true
 
 [language-server.rust-analyzer.config.check]
 features = "all"
@@ -59,7 +59,7 @@ extraArgs = [
   "-Wclippy::perf",        # code that can be written to run faster
   "-Wclippy::pedantic",    # lints which are rather strict or have occasional false positives
   "-Wclippy::nursery",     # new lints that are still under development
-  "-Wclippy::cargo",       # lints for the cargo manifest
+  "-Aclippy::cargo",       # lints for the cargo manifest
   # Use in production
   "-Aclippy::restriction", # lints which prevent the use of language and library features
   # Other
