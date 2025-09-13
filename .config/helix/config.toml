@@ -97,25 +97,31 @@ wrap-indicator = "↪"
 
 
 [keys.insert]
-C-space = "signature_help"
-# tab = "move_parent_node_end"
 tab = "completion"
-# S-tab = "move_parent_node_start"
 A-tab = "insert_tab"
+C-space = "signature_help"
+C-backspace = "delete_word_backward"
+# tab = "move_parent_node_end"
+# S-tab = "move_parent_node_start"
+
 
 [keys.select]
+";" = ["collapse_selection", "normal_mode"]
+a = ["collapse_selection", "append_mode"]
+
 x = "extend_line"
-# a = ["append_mode", "collapse_selection"]
+V = ["extend_to_line_bounds", "trim_selections"]
+D = ["ensure_selections_forward", "extend_to_line_end"]
 
 C-y = "yank_joined"
+C-space = "signature_help"
+C-backspace = "delete_word_backward"
 
-# tab = "extend_parent_node_end"
-# S-tab = "extend_parent_node_start"
 tab = "expand_selection"
 S-tab = "shrink_selection"
 A-tab = "insert_tab"
-
-";" = ["collapse_selection", "normal_mode"]
+# tab = "extend_parent_node_end"
+# S-tab = "extend_parent_node_start"
 
 L = "goto_next_buffer"
 H = "goto_previous_buffer"
@@ -125,15 +131,24 @@ C-h = "jump_view_left"
 C-j = "jump_view_down"
 C-l = "jump_view_right"
 
+
+[keys.normal]
+"=" = ":format"
+"A-=" = "format_selections"
+a = ["collapse_selection", "append_mode"]
+
+x = "extend_line"
 V = ["extend_to_line_bounds", "trim_selections"]
 D = ["ensure_selections_forward", "extend_to_line_end"]
 
-[keys.normal]
-x = "extend_line"
-"=" = ":format"
-"A-=" = "format_selections"
-
 C-y = "yank_joined"
+C-space = "signature_help"
+
+tab = "expand_selection"
+S-tab = "shrink_selection"
+A-tab = "insert_tab"
+# tab = "move_parent_node_end"
+# S-tab = "move_parent_node_start"
 
 L = "goto_next_buffer"
 H = "goto_previous_buffer"
@@ -144,17 +159,6 @@ C-h = "jump_view_left"
 C-j = "jump_view_down"
 C-l = "jump_view_right"
 
-V = ["extend_to_line_bounds", "trim_selections"]
-D = ["ensure_selections_forward", "extend_to_line_end"]
-
-C-space = "signature_help"
-
-
-tab = "expand_selection"
-S-tab = "shrink_selection"
-A-tab = "insert_tab"
-# tab = "move_parent_node_end"
-# S-tab = "move_parent_node_start"
 
 A-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 A-k = [
@@ -193,16 +197,16 @@ e = ":toggle end-of-line-diagnostics disable hint"
 d = ":toggle inline-diagnostics.cursor-line disable warning"
 D = ":toggle inline-diagnostics.other-lines disable error"
 
-z = [ # TODO: not work
-  ":set-option cursorline true",
-  ":set-option rulers [100]",
-  ":set-option soft-wrap.enable false",
-  ":set-option line-number relative",
-  ':set-option gutters.layout ["line-numbers","spacer"]',
-  ":set-option bufferline never",
-  ":set-option indent-guides.render true",
-  ":set-option lsp.display-inlay-hints false",
-  ":set-option end-of-line-diagnostics disable",
-  ":set-option inline-diagnostics.other-lines disable",
-  ":set-option inline-diagnostics.cursor-line disable",
-]
+# z = [ # TODO: not work
+#   ":set-option cursorline true",
+#   ":set-option rulers [100]",
+#   ":set-option soft-wrap.enable false",
+#   ":set-option line-number relative",
+#   ':set-option gutters.layout ["line-numbers","spacer"]',
+#   ":set-option bufferline never",
+#   ":set-option indent-guides.render true",
+#   ":set-option lsp.display-inlay-hints false",
+#   ":set-option end-of-line-diagnostics disable",
+#   ":set-option inline-diagnostics.other-lines disable",
+#   ":set-option inline-diagnostics.cursor-line disable",
+# ]

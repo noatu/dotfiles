@@ -5,13 +5,13 @@ error = "red"
 info = "blue"
 hint = "orange"
 
-"comment.block.documentation" = { fg = "comment", modifiers = [
-  "dim", # hard to distinguish otherwise
-] } # Block doc comments, e.g '/** */' in rust.
-"comment.line.documentation" = { fg = "comment", modifiers = [
-  "italic",
-] } # Line doc comments, e.g '///' in rust.
+# Hard to read excluded files if "dim" is present.
+# "diagnostic.unnecessary" = { modifiers = [] }
 
+# Block doc comments, e.g '/** */' in rust. Hard to distinguish otherwise
+"comment.block.documentation" = { fg = "comment", modifiers = ["dim"] }
+# Line doc comments, e.g '///' in rust.
+"comment.line.documentation" = { fg = "comment", modifiers = ["italic"] }
 
 # ui.background = {}
 # ui.gutter = {}

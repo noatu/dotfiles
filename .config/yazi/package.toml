@@ -1,7 +1,5 @@
-[[plugin.deps]]
-use = "grappas/wl-clipboard"
-rev = "c4edc4f"
-hash = "51ff959c3c26cb3889589a0f8d394f14"
+[plugin]
+deps = []
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:dracula"

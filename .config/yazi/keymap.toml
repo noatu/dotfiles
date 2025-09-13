@@ -2,12 +2,17 @@
 
 [mgr]
 prepend_keymap = [
-    { on = "<C-y>", run = "plugin wl-clipboard", desc = "Yank to clipboard" },
-    { on = "R", run = "rename --empty=stem --cursor=start", desc = "Rename file full" },
-    { on = [
-        "g",
-        "d",
-    ], run = "cd ~/documents", desc = "Goto ~/documents" },
+  # { on = "<C-y>", run = "plugin wl-clipboard", desc = "Yank to clipboard" },
+  { on = "<C-y>", run = [
+    'shell -- for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list',
+    "yank",
+  ] },
 
-    { on = "<A-s>", run = "search --via=rga", desc = "Search files by content via ripgrep-all" },
+  { on = "R", run = "rename --empty=stem --cursor=start", desc = "Rename file full" },
+  { on = [
+    "g",
+    "d",
+  ], run = "cd ~/documents", desc = "Goto ~/documents" },
+
+  { on = "<A-s>", run = "search --via=rga", desc = "Search files by content via ripgrep-all" },
 ]
