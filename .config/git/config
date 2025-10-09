@@ -3,7 +3,7 @@
 [diff]
     tool = nvimdiff
 [core]
-    editor = nvim
+    editor = helix
     ; repositoryformatversion = 1
 ; [extensions]
     ; objectformat = sha256

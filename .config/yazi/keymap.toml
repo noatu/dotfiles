@@ -3,10 +3,7 @@
 [mgr]
 prepend_keymap = [
   # { on = "<C-y>", run = "plugin wl-clipboard", desc = "Yank to clipboard" },
-  { on = "<C-y>", run = [
-    'shell -- for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list',
-    "yank",
-  ] },
+  { on = "<C-y>", run = 'shell -- for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list' },
 
   { on = "R", run = "rename --empty=stem --cursor=start", desc = "Rename file full" },
   { on = [

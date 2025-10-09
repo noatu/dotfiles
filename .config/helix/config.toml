@@ -8,11 +8,11 @@ theme = "custom" # monokai_soda, kaolin-valley-dark, material_deep_ocean, carbon
 shell = ["fish", "-c"]
 line-number = "relative"
 cursorline = true
-continue-comments = false # annoying
-auto-completion = true    # TODO: is it annoying?
-completion-replace = true # why is it not default
+continue-comments = true   # doc comments
+auto-completion = true
+completion-replace = false # STOP deleting stuff
 auto-format = true
-auto-info = true          # TODO: idle-timeout?
+auto-info = true           # TODO: idle-timeout?
 # true-color = true
 # undercurl = true
 rulers = [80, 100]
@@ -107,7 +107,7 @@ C-backspace = "delete_word_backward"
 
 [keys.select]
 ";" = ["collapse_selection", "normal_mode"]
-a = ["collapse_selection", "append_mode"]
+# a = ["collapse_selection", "append_mode"]
 
 x = "extend_line"
 V = ["extend_to_line_bounds", "trim_selections"]
@@ -135,7 +135,7 @@ C-l = "jump_view_right"
 [keys.normal]
 "=" = ":format"
 "A-=" = "format_selections"
-a = ["collapse_selection", "append_mode"]
+# a = ["collapse_selection", "append_mode"]
 
 x = "extend_line"
 V = ["extend_to_line_bounds", "trim_selections"]
@@ -182,22 +182,20 @@ n = "file_picker_in_current_buffer_directory"
 # Toggle
 [keys.normal.space.t]
 f = ":toggle auto-format"
-
 c = ":toggle cursorline"
 w = ":toggle soft-wrap.enable"
 n = ":toggle line-number absolute relative"
 b = ":toggle bufferline never multiple"
-
-r = ":set-option rulers []"
-R = ":set-option rulers [80,100]"
-
+r = ":toggle rulers [] [80,100]"
 g = ":toggle indent-guides.render"
 i = ":toggle lsp.display-inlay-hints"
 e = ":toggle end-of-line-diagnostics disable hint"
 d = ":toggle inline-diagnostics.cursor-line disable warning"
 D = ":toggle inline-diagnostics.other-lines disable error"
 
-# z = [ # TODO: not work
+# t = [":toggle cursorline", ":toggle line-number absolute relative"]
+# https://github.com/helix-editor/helix/issues/13187
+# t = [ # TODO: not work
 #   ":set-option cursorline true",
 #   ":set-option rulers [100]",
 #   ":set-option soft-wrap.enable false",

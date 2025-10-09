@@ -18,6 +18,38 @@ auto-format = false
 name = "toml"
 auto-format = true
 
+[[language]]
+name = "sql"
+auto-format = true
+formatter = { command = "sqlformat", args = [
+  "--keywords",
+  "upper",          # "upper", "lower", "capitalize"
+  "--identifiers",
+  "lower",
+  "--reindent",
+  "--indent_width",
+  "2",
+  # "--compact", "True",
+  "-",
+] }
+
+
+[[language]]
+name = "rust"
+
+[language.debugger]
+name = "lldb-dap"
+transport = "stdio"
+command = "lldb-dap"
+
+[[language.debugger.templates]]
+name = "binary"
+request = "launch"
+completion = [{ name = "binary", completion = "filename" }]
+args = { program = "{0}", initCommands = [
+  "command script import /usr/local/etc/lldb_vscode_rustc_primer.py",
+] }
+
 
 # TODO: still aligns
 [language-server.taplo.config]

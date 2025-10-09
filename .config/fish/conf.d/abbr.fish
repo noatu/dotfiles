@@ -9,13 +9,11 @@ abbr t trash put
 abbr mm -- mpv --shuffle \$XDG_MUSIC_DIR
 
 abbr l lazygit
-abbr g git
 # abbr dots -- git --git-dir \~/.dotfiles/ --work-tree \~
 abbr gl git log
 abbr ga git add
 abbr gc git commit
 abbr gs git status
-abbr gcl git clone
 abbr gco git checkout
 
 function __last_hist_item
