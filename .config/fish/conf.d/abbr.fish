@@ -8,7 +8,7 @@ abbr t trash put
 # abbr m mpv
 abbr mm -- mpv --shuffle \$XDG_MUSIC_DIR
 
-abbr l lazygit
+abbr lg lazygit
 # abbr dots -- git --git-dir \~/.dotfiles/ --work-tree \~
 abbr gl git log
 abbr ga git add

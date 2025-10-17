@@ -14,9 +14,7 @@ function fish_right_prompt
     set -g __fish_git_prompt_showcolorhints 1
     set -g __fish_git_prompt_use_informative_chars 1
 
-    # Unfortunately this only works if we have a sensible locale
-    string match -qi '*.utf-8' -- $LANG $LC_CTYPE $LC_ALL
-    and set -g __fish_git_prompt_char_dirtystate \U1F4a9
+    set -g __fish_git_prompt_char_dirtystate '!'
     set -g __fish_git_prompt_char_untrackedfiles '?'
 
     set -l vcs (fish_vcs_prompt '%s' 2>/dev/null)
@@ -28,7 +26,7 @@ function fish_right_prompt
 
     # Count duration (optionally)
     if test $CMD_DURATION -gt 100 -a \
-        "$__fish_right_prompt_status_generation" != $status_generation
+            "$__fish_right_prompt_status_generation" != $status_generation
         set -g __fish_right_prompt_status_generation $status_generation
 
         set -l secs (math -s2 $CMD_DURATION / 1000 % 60)

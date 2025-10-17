@@ -57,6 +57,13 @@ alignComments = false
 align_comments = false
 
 
+# [language-server.yaml-language-server.config.yaml]
+# format = { enable = true }
+# validate = true
+# schemaStore = true
+# [language-server.yaml-language-server.config.yaml.schemas]
+# "" = "openapi.{yml,yaml}"
+
 [language-server.tinymist.config]
 formatterPrintWidth = 100  # can't stand 120
 formatterMode = "typstyle" # or typstfmt

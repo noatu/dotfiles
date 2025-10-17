@@ -12,6 +12,8 @@
     abbrevCommit = true
 [gpg "ssh"]
     allowedSignersFile = ~/.config/git/allowed_signers
+[fetch]
+    prune = true
 
 [includeIf "gitdir:~/src/"]
     path = ~/src/.gitconfig
