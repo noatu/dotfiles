@@ -1,7 +1,7 @@
 "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
 [mgr]
-ratio = [0, 2, 3] # prev, current, next / preview
+ratio = [0, 2, 3]   # prev, current, next / preview
 sort_by = "natural" # 1.md < 2.md < 10.md
 # sort_translit = false # replaces Â as A, Æ as AE, etc.
 linemode = "mtime"
@@ -19,7 +19,8 @@ image_delay = 0
 # image_filter = "triangle"
 # image_quality = 75
 
-# [tasks]
+[tasks]
+image_bound = [0, 0]
 # suppress_preload = false
 # image_alloc = 536870912  # 512MB
 

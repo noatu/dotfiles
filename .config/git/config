@@ -4,6 +4,7 @@
     tool = nvimdiff
 [core]
     editor = helix
+	pager = delta
     ; repositoryformatversion = 1
 ; [extensions]
     ; objectformat = sha256
@@ -23,3 +24,9 @@
 ; 	clean = git-lfs clean -- %f
 ; 	smudge = git-lfs smudge -- %f
 ; 	process = git-lfs filter-process
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+[merge]
+	conflictStyle = zdiff3

@@ -1,4 +1,9 @@
 [[language]]
+name = "lua"
+auto-format = false
+
+
+[[language]]
 name = "markdown"
 [language.auto-pairs]
 '_' = '_'
@@ -7,31 +12,60 @@ name = "markdown"
 '[' = ']'
 '"' = '"'
 "'" = "'"
-'`' = '`'
+# '`' = '`'
 # '<' = '>'
+[language-server.markdown-oxide.config]
+unresolved_diagnostics = true
+include_md_extension_md_link = true # [File](file.md) or [File](file)
 
 [[language]]
-name = "lua"
+name = "sql"
 auto-format = false
+formatter = { command = "sqlformat", args = [
+  "--keywords",
+  "upper",         # "upper", "lower", "capitalize"
+  "--identifiers",
+  "upper",
+  # "--reindent",
+  "--indent_width",
+  "2",
+  # "--indent_columns",
+  # "--compact", "True",
+  "-",
+] }
+
 
 [[language]]
 name = "toml"
 auto-format = true
 
+# TODO: still aligns
+[language-server.taplo.config]
+alignComments = false
+align_comments = false
+
+
+# [language-server.yaml-language-server.config.yaml]
+# format = { enable = true }
+# validate = true
+# schemaStore = true
+# [language-server.yaml-language-server.config.yaml.schemas]
+# "" = "openapi.{yml,yaml}"
+
+# [language-server.nil]
+# formatting.command = "alejandra"
+
+
 [[language]]
-name = "sql"
+name = "typst"
 auto-format = true
-formatter = { command = "sqlformat", args = [
-  "--keywords",
-  "upper",          # "upper", "lower", "capitalize"
-  "--identifiers",
-  "lower",
-  "--reindent",
-  "--indent_width",
-  "2",
-  # "--compact", "True",
-  "-",
-] }
+language-servers = ["tinymist"]
+
+[language-server.tinymist.config]
+formatterPrintWidth = 100  # can't stand 120
+formatterMode = "typstyle" # or typstfmt
+exportPdf = "never"        # onSave, default: never
+semanticTokens = "enable"
 
 
 [[language]]
@@ -49,31 +83,6 @@ completion = [{ name = "binary", completion = "filename" }]
 args = { program = "{0}", initCommands = [
   "command script import /usr/local/etc/lldb_vscode_rustc_primer.py",
 ] }
-
-
-# TODO: still aligns
-[language-server.taplo.config]
-alignComments = false
-align_comments = false
-
-
-# [language-server.yaml-language-server.config.yaml]
-# format = { enable = true }
-# validate = true
-# schemaStore = true
-# [language-server.yaml-language-server.config.yaml.schemas]
-# "" = "openapi.{yml,yaml}"
-
-[language-server.tinymist.config]
-formatterPrintWidth = 100  # can't stand 120
-formatterMode = "typstyle" # or typstfmt
-exportPdf = "onSave"       # "onDocumentHasTitle", # default: never
-semanticTokens = "enable"
-
-
-# [language-server.nil]
-# formatting.command = "alejandra"
-
 
 [language-server.rust-analyzer.config]
 checkOnSave = true
