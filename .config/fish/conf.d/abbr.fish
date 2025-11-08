@@ -6,7 +6,8 @@ abbr m mkdir
 abbr o open
 abbr t trash put
 # abbr m mpv
-abbr mm -- mpv --shuffle \$XDG_MUSIC_DIR
+abbr ma -- mpv --profile=anime .
+abbr mm -- mpv --profile=music --shuffle \$XDG_MUSIC_DIR
 
 abbr lg lazygit
 # abbr dots -- git --git-dir \~/.dotfiles/ --work-tree \~
