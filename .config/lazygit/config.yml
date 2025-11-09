@@ -2,11 +2,8 @@ promptToReturnFromSubprocess: false
 gui:
   # One of 'rounded' (default) | 'single' | 'double' | 'hidden' | 'bold'
   border: single
-
 git:
-  # pagers:
-  #   - pager: delta --dark --paging=never
-  paging:
-    colorArg: always
-    # --line-numbers
-    pager: delta --dark  --paging=never
+  pagers:
+    - colorArg: always
+      # --line-numbers
+      pager: delta --dark --paging=never
