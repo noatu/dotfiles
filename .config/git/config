@@ -1,20 +1,29 @@
 [init]
     defaultBranch = main
-[diff]
-    tool = nvimdiff
+[fetch]
+    prune = true
 [core]
     editor = helix
-	pager = delta
+    pager = delta
     ; repositoryformatversion = 1
 ; [extensions]
     ; objectformat = sha256
+[diff]
+    tool = nvimdiff
+[merge]
+    conflictStyle = zdiff3
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    dark = true
+    navigate = true
+
 [log]
     showSignature = true
     abbrevCommit = true
+
 [gpg "ssh"]
     allowedSignersFile = ~/.config/git/allowed_signers
-[fetch]
-    prune = true
 
 [includeIf "gitdir:~/src/"]
     path = ~/src/.gitconfig
@@ -24,9 +33,3 @@
 ; 	clean = git-lfs clean -- %f
 ; 	smudge = git-lfs smudge -- %f
 ; 	process = git-lfs filter-process
-[interactive]
-	diffFilter = delta --color-only
-[delta]
-	navigate = true
-[merge]
-	conflictStyle = zdiff3
