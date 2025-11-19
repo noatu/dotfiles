@@ -10,6 +10,8 @@
     ; objectformat = sha256
 [diff]
     tool = nvimdiff
+[pull]
+    rebase = true
 [merge]
     conflictStyle = zdiff3
 [interactive]

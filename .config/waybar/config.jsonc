@@ -2,7 +2,9 @@
   "name": "main",
   "layer": "top",
   "position": "bottom",
-  //"output": ["HDMI-A-1"],
+  // "output": [
+  //   "DP-6"
+  // ],
   "height": 24,
   //"width": 1280,
   "modules-left": [

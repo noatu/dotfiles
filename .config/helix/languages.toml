@@ -61,11 +61,13 @@ name = "typst"
 auto-format = true
 language-servers = ["tinymist"]
 
+[language-server.tinymist]
+command = "tinymist"
+
 [language-server.tinymist.config]
 formatterPrintWidth = 100  # can't stand 120
 formatterMode = "typstyle" # or typstfmt
 exportPdf = "never"        # onSave, default: never
-semanticTokens = "enable"
 
 
 [[language]]
