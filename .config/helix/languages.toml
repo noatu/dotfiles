@@ -2,6 +2,9 @@
 name = "lua"
 auto-format = false
 
+[[language]]
+name = "tsx"
+auto-format = true
 
 [[language]]
 name = "markdown"

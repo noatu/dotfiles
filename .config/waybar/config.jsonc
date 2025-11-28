@@ -2,9 +2,7 @@
   "name": "main",
   "layer": "top",
   "position": "bottom",
-  // "output": [
-  //   "DP-6"
-  // ],
+  // "output": [ "DP-6" ],
   "height": 24,
   //"width": 1280,
   "modules-left": [
@@ -39,6 +37,7 @@
   "ipc": false,
   //"include": ["~/.config/waybar/modules.jsonc"]
   "hyprland/workspaces": {
+    // "all-outputs": true,
     "all-outputs": false,
     "show-special": true,
     "format": "{icon}",

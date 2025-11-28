@@ -111,7 +111,7 @@ A-b = "move_parent_node_start"
 ";" = ["collapse_selection", "normal_mode"]
 # a = ["collapse_selection", "append_mode"]
 
-x = "extend_line"
+X = "extend_line_up"
 V = ["extend_to_line_bounds", "trim_selections"]
 D = ["ensure_selections_forward", "extend_to_line_end"]
 
@@ -139,7 +139,7 @@ C-l = "jump_view_right"
 "A-=" = "format_selections"
 # a = ["collapse_selection", "append_mode"]
 
-x = "extend_line"
+X = "extend_line_up"
 V = ["extend_to_line_bounds", "trim_selections"]
 D = ["ensure_selections_forward", "extend_to_line_end"]
 

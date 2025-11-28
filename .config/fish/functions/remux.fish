@@ -5,7 +5,7 @@ function remux --wraps=ffmpeg --description 'remux to mp4'
     if string match -qr '^(https?://|youtu\.?be|[a-zA-Z0-9]{11}$)' $argv[1]
         set argv[1] (yt-dlp -q --force-overwrites --print after_move:filepath \
         -f 'bestvideo[height<=?1080][vcodec!=?av01]+bestaudio/best' \
-        -o "/tmp/remux/download.%(ext)s" $argv[1])
+        -o '/tmp/remux/download.%(ext)s' $argv[1])
         or return
     end
 
