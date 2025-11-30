@@ -21,8 +21,9 @@ set -gx CLIPPY_CONF_DIR $XDG_DATA_HOME/cargo/
 set -gx fish_user_paths ~/.local/bin $CARGO_HOME/bin
 
 # -agx is a bad idea as login shell itself also does it
-set -gx WINEPATH /usr/x86_64-w64-mingw32/bin
+# set -gx WINEPATH /usr/x86_64-w64-mingw32/bin
 # set -gx CPATH    /usr/x86_64-w64-mingw32/include
+set -gx WINEPATH /opt/llvm-mingw/x86_64-w64-mingw32/bin/
 
 set -gx BROWSER librewolf # for fish documentation mainly
 

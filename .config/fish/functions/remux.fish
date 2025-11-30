@@ -1,4 +1,4 @@
-function remux --wraps=ffmpeg --description 'remux to mp4'
+function remux --wraps ffmpeg --description 'remux to mp4'
     mkdir -p /tmp/remux
 
     # download file if input path is a url

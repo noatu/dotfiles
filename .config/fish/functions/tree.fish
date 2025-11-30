@@ -1,6 +1,6 @@
 if command -q eza
-    function tree --wraps='eza'
-        command eza -T --group-directories-last $argv
+    function tree --wraps eza
+        ls -T $argv
     end
 else if command -q tree
     function tree
