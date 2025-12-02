@@ -10,6 +10,8 @@
     ; objectformat = sha256
 [diff]
     tool = nvimdiff
+    algorithm = histogram
+    # colorMoved = default
 [pull]
     rebase = true
 [merge]
@@ -17,8 +19,15 @@
 [interactive]
     diffFilter = delta --color-only
 [delta]
+    # max-line-distance = 1.0
     dark = true
     navigate = true
+    line-numbers = false
+    side-by-side = false
+    minus-style = syntax "#3f0001"
+    minus-emph-style = syntax "#800003"
+    plus-style = syntax "#003800" 
+    plus-emph-style = syntax "#007800"
 
 [log]
     showSignature = true

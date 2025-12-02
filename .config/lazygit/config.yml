@@ -5,5 +5,4 @@ gui:
 git:
   pagers:
     - colorArg: always
-      # --line-numbers
-      pager: delta --dark --paging=never
+      pager: delta --paging=never

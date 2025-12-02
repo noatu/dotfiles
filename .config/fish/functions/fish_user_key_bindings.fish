@@ -1,10 +1,12 @@
 function fish_user_key_bindings
-    if command -q fzf; and functions -q fzf_key_bindings
-        set -gx FZF_CTRL_R_OPTS --reverse
-        fzf_key_bindings
-    else
-        echo (set_color brcyan)'INFO: fzf not found'
-    end
+    # if command -q fzf; and functions -q fzf_key_bindings
+    set -gx FZF_CTRL_R_OPTS --reverse
+    functions -q fzf_key_bindings; and fzf_key_bindings
+    # else
+    # echo (set_color brcyan)'INFO: fzf not found'
+    # end
+
+    bind -M insert ctrl-n accept-autosuggestion
 
     # Unused: alt-g, alt-z, insert ctrl-r
 
