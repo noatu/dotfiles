@@ -111,9 +111,19 @@ A-b = "move_parent_node_start"
 ";" = ["collapse_selection", "normal_mode"]
 # a = ["collapse_selection", "append_mode"]
 
-X = "extend_line_up"
-V = ["extend_to_line_bounds", "trim_selections"]
+X = "extend_line_above"
+# V = ["extend_to_line_bounds", "trim_selections"]
 D = ["ensure_selections_forward", "extend_to_line_end"]
+V = [
+  "save_selection",
+  "collapse_selection",
+  "normal_mode",
+  "goto_line_start",
+  "extend_to_line_end_newline",
+  "delete_selection",
+  "jump_backward",
+  "select_mode",
+]
 
 C-y = "yank_joined"
 C-space = "signature_help"
@@ -127,11 +137,12 @@ S-tab = "shrink_selection"
 
 L = "goto_next_buffer"
 H = "goto_previous_buffer"
+C-l = "@:e<space><C-r>%<ret>:bc<ret>:<up><up><ret>" # move buffer to the end
 
-C-k = "jump_view_up"
-C-h = "jump_view_left"
-C-j = "jump_view_down"
-C-l = "jump_view_right"
+# C-k = "jump_view_up"
+# C-h = "jump_view_left"
+# C-j = "jump_view_down"
+# C-l = "jump_view_right"
 
 
 [keys.normal]
@@ -139,9 +150,10 @@ C-l = "jump_view_right"
 "A-=" = "format_selections"
 # a = ["collapse_selection", "append_mode"]
 
-X = "extend_line_up"
-V = ["extend_to_line_bounds", "trim_selections"]
+X = "extend_line_above"
+# V = ["extend_to_line_bounds", "trim_selections"]
 D = ["ensure_selections_forward", "extend_to_line_end"]
+V = ["goto_line_start", "extend_to_line_end_newline", "delete_selection"]
 
 C-y = "yank_joined"
 C-space = "signature_help"
@@ -154,12 +166,13 @@ S-tab = "shrink_selection"
 
 L = "goto_next_buffer"
 H = "goto_previous_buffer"
+C-l = "@:e<space><C-r>%<ret>:bc<ret>:<up><up><ret>" # move buffer to the end
 
 # C-q = "wclose"
-C-k = "jump_view_up"
-C-h = "jump_view_left"
-C-j = "jump_view_down"
-C-l = "jump_view_right"
+# C-k = "jump_view_up"
+# C-h = "jump_view_left"
+# C-j = "jump_view_down"
+# C-l = "jump_view_right"
 
 
 A-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]

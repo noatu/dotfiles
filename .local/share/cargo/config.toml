@@ -1,19 +1,29 @@
+[alias]
+cl = "clippy -- --no-deps -Wclippy::correctness -Wclippy::complexity -Wclippy::suspicious -Wclippy::style -Wclippy::perf -Wclippy::pedantic -Wclippy::nursery -Aclippy::cargo -Aclippy::restriction -Aclippy::must_use_candidate"
+
 [build]
 rustc-wrapper = "sccache"
 rustflags = ["-Z", "threads=8"]
+
 
 [profile.release]
 lto = true
 
 [profile.dev]
 opt-level = 1
+debug = "line-tables-only"
 codegen-backend = "cranelift"
-
 [unstable]
 codegen-backend = true
 
 [profile.dev.package."*"]
+debug = false
 opt-level = 3
+
+[profile.debugging]
+inherits = "dev"
+debug = true
+
 
 [target.x86_64-unknown-linux-gnu]
 linker = "clang"

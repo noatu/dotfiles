@@ -4,5 +4,8 @@ gui:
   border: single
 git:
   pagers:
-    - colorArg: always
-      pager: delta --paging=never
+    - pager: delta --paging=never
+    - pager: delta --paging=never --side-by-side --line-numbers
+    # - externalDiffCommand: difft --color=always --display=inline --context=5
+    # - externalDiffCommand: ~/.local/bin/difft --color=always --display=inline --context=5 --line-numbers=off
+    # colorArg: always

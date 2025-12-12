@@ -28,6 +28,8 @@
     minus-emph-style = syntax "#800003"
     plus-style = syntax "#003800" 
     plus-emph-style = syntax "#007800"
+    line-numbers-left-format = "{nm:<4}"
+    line-numbers-right-format = "{np:<4}"
 
 [log]
     showSignature = true
@@ -35,6 +37,9 @@
 
 [gpg "ssh"]
     allowedSignersFile = ~/.config/git/allowed_signers
+[user]
+    name = -
+    email = -
 
 [includeIf "gitdir:~/src/"]
     path = ~/src/.gitconfig
