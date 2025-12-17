@@ -25,6 +25,7 @@
 !.config/fish/
 !.config/paru/
 !.config/htop/
+!.config/tealdeer/
 
 !.config/yazi/
 .config/yazi/*/

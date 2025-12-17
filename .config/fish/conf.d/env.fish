@@ -18,7 +18,7 @@ set -gx CARGO_HOME $XDG_DATA_HOME/cargo
 set -gx CLIPPY_CONF_DIR $XDG_DATA_HOME/cargo/
 
 # Can't use '~' in universal variables
-set -gx fish_user_paths ~/.local/bin $CARGO_HOME/bin
+set -gx fish_user_paths ~/.local/bin $CARGO_HOME/bin $GOPATH/bin
 
 # -agx is a bad idea as login shell itself also does it
 # set -gx WINEPATH /usr/x86_64-w64-mingw32/bin

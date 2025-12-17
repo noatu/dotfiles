@@ -103,6 +103,8 @@ S-tab = "insert_tab"
 C-space = "signature_help"
 C-backspace = "delete_word_backward"
 
+A-o = "open_below"
+A-O = "open_above"
 A-e = "move_parent_node_end"
 A-b = "move_parent_node_start"
 
@@ -138,6 +140,7 @@ S-tab = "shrink_selection"
 L = "goto_next_buffer"
 H = "goto_previous_buffer"
 C-l = "@:e<space><C-r>%<ret>:bc<ret>:<up><up><ret>" # move buffer to the end
+C-g = ":reset-diff-change"
 
 # C-k = "jump_view_up"
 # C-h = "jump_view_left"
@@ -167,6 +170,7 @@ S-tab = "shrink_selection"
 L = "goto_next_buffer"
 H = "goto_previous_buffer"
 C-l = "@:e<space><C-r>%<ret>:bc<ret>:<up><up><ret>" # move buffer to the end
+C-g = ":reset-diff-change"
 
 # C-q = "wclose"
 # C-k = "jump_view_up"
@@ -183,7 +187,13 @@ A-k = [
   "paste_before",
 ]
 # A-J = ["extend_to_line_bounds", "yank", "paste_after"]
-A-K = ["extend_to_line_bounds", "yank", "paste_after"]
+A-K = [
+  "save_selection",
+  "extend_to_line_bounds",
+  "yank",
+  "paste_before",
+  "jump_backward",
+]
 
 [keys.normal.space]
 '.' = ":config-reload"

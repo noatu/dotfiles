@@ -23,21 +23,22 @@ name = "markdown"
 unresolved_diagnostics = true
 include_md_extension_md_link = true # [File](file.md) or [File](file)
 
-[[language]]
-name = "sql"
-auto-format = false
-formatter = { command = "sqlformat", args = [
-  "--keywords",
-  "upper",         # "upper", "lower", "capitalize"
-  "--identifiers",
-  "upper",
-  # "--reindent",
-  "--indent_width",
-  "2",
-  # "--indent_columns",
-  # "--compact", "True",
-  "-",
-] }
+# Hate it
+# [[language]]
+# name = "sql"
+# auto-format = false
+# formatter = { command = "sqlformat", args = [
+#   # "--keywords",
+#   # "upper",         # "upper", "lower", "capitalize"
+#   # "--identifiers",
+#   # "lower",
+#   # "--reindent",
+#   "--indent_width",
+#   "2",
+#   # "--indent_columns",
+#   # "--compact", "True",
+#   "-",
+# ] }
 
 
 [[language]]

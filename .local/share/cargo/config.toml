@@ -17,8 +17,8 @@ codegen-backend = "cranelift"
 codegen-backend = true
 
 [profile.dev.package."*"]
-debug = false
 opt-level = 3
+debug = false
 
 [profile.debugging]
 inherits = "dev"
