@@ -26,6 +26,7 @@
 !.config/paru/
 !.config/htop/
 !.config/tealdeer/
+!.config/direnv/
 
 !.config/yazi/
 .config/yazi/*/
@@ -37,6 +38,9 @@
 !.config/lazygit/
 .config/lazygit/*
 !.config/lazygit/config.yml
+!.config/lazydocker/
+.config/lazydocker/*
+!.config/lazydocker/config.yml
 
 !.config/helix/
 

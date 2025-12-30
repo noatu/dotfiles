@@ -58,8 +58,9 @@ align_comments = false
 # [language-server.yaml-language-server.config.yaml.schemas]
 # "" = "openapi.{yml,yaml}"
 
-# [language-server.nil]
-# formatting.command = "alejandra"
+# [[language]]
+# name = "nix"
+# formatter = { command = "alejandra" }
 
 
 [[language]]
@@ -74,6 +75,45 @@ command = "tinymist"
 formatterPrintWidth = 100  # can't stand 120
 formatterMode = "typstyle" # or typstfmt
 exportPdf = "never"        # onSave, default: never
+
+
+[[language]]
+name = "devicetree"
+file-types = ["dts", "dtsi", "keymap"]
+# language-servers = ["devicetree_ls"]
+
+# [language-server.devicetree_ls]
+# command = "devicetree-language-server"
+# args = ["--stdio"]
+
+# [language-server.devicetree_ls.config.devicetree]
+# # cwd = "~/src/keyboard/zmk"
+# defaultIncludePaths = [
+#   "~/src/keyboard/zmk/app/dts",
+# ]
+# # defaultBindingType = "Zephyr"
+# # defaultZephyrBindings = ["./zephyr/dts/bindings"]
+# # contexts = []
+
+
+# [[language]]
+# name = "python"
+# language-servers = ["pylsp", "ruff"]
+# auto-format = true
+# scope = "source.python"
+
+# [language.formatter]
+# command = "ruff"
+# args = ["format", "-"]
+
+# [language-server.ruff]
+# command = "ruff"
+# args = ["server"]
+
+# [language-server.pylsp.config.pylsp.plugins]
+# pylsp_mypy.enabled = true
+# pylsp_mypy.live_mode = true
+# rope_autoimport.enabled = true
 
 
 [[language]]

@@ -18,14 +18,16 @@ set -gx CARGO_HOME $XDG_DATA_HOME/cargo
 set -gx CLIPPY_CONF_DIR $XDG_DATA_HOME/cargo/
 
 # Can't use '~' in universal variables
-set -gx fish_user_paths ~/.local/bin $CARGO_HOME/bin $GOPATH/bin
+fish_add_path -g ~/.local/bin $CARGO_HOME/bin $GOPATH/bin
+
+set -gx npm_config_prefix ~/.local
 
 # -agx is a bad idea as login shell itself also does it
 # set -gx WINEPATH /usr/x86_64-w64-mingw32/bin
 # set -gx CPATH    /usr/x86_64-w64-mingw32/include
 set -gx WINEPATH /opt/llvm-mingw/x86_64-w64-mingw32/bin/
 
-set -gx BROWSER librewolf # for fish documentation mainly
+set -gx BROWSER librewolf
 
 # Convenience
 set -gx SCREENSHOT_DIR $XDG_PICTURES_DIR/screen

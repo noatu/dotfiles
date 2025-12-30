@@ -14,6 +14,8 @@
     # colorMoved = default
 [pull]
     rebase = true
+[push]
+    recurseSubmodules = check
 [merge]
     conflictStyle = zdiff3
 [interactive]
@@ -35,17 +37,24 @@
     showSignature = true
     abbrevCommit = true
 
+[gpg]
+    format = ssh
 [gpg "ssh"]
     allowedSignersFile = ~/.config/git/allowed_signers
 [user]
     name = -
     email = -
 
+# [tag]
+#     gpgSign = true
+# [commit]
+#     gpgsign = true
 [includeIf "gitdir:~/src/"]
     path = ~/src/.gitconfig
 
-; [filter "lfs"]
-; 	required = true
-; 	clean = git-lfs clean -- %f
-; 	smudge = git-lfs smudge -- %f
-; 	process = git-lfs filter-process
+
+# [filter "lfs"]
+# 	required = true
+# 	clean = git-lfs clean -- %f
+# 	smudge = git-lfs smudge -- %f
+# 	process = git-lfs filter-process
