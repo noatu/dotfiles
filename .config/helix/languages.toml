@@ -78,6 +78,10 @@ exportPdf = "never"        # onSave, default: never
 
 
 [[language]]
+name = "env"
+file-types = ["conf"]
+
+[[language]]
 name = "devicetree"
 file-types = ["dts", "dtsi", "keymap"]
 # language-servers = ["devicetree_ls"]
