@@ -1,10 +1,10 @@
 status is-interactive; or return
 
-status is-login; and abbr H Hyprland
+status is-login; and abbr H start-hyprland
 
 abbr m mkdir
 abbr o open
-abbr t trash put
+abbr t trashy put
 abbr b bat -p
 # abbr m mpv
 abbr ma -- mpv --profile=anime .
