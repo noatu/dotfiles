@@ -1,5 +1,5 @@
 function remux --wraps ffmpeg --description 'remux to mp4'
-    mkdir -p /tmp/remux
+    test -e /tmp/remux; or mkdir /tmp/remux
 
     # download file if input path is a url
     if string match -qr '^(https?://|youtu\.?be|[a-zA-Z0-9]{11}$)' $argv[1]

@@ -23,6 +23,7 @@
 # CLI / TUI
 !.config/gdu/
 !.config/fish/
+.config/fish/source
 !.config/paru/
 !.config/htop/
 !.config/tealdeer/
