@@ -1,0 +1,7 @@
+program_options:
+  tray: auto
+  automount: true
+  notify: true
+  password_cache: false
+  file_manager: xdg-open
+  terminal: yazi

@@ -58,6 +58,7 @@
 !.config/mako/
 !.config/kitty/
 !.config/waybar/
+!.config/udiskie/
 !.config/gf2_config.ini
 
 # Media
