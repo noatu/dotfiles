@@ -34,7 +34,7 @@ set -gx SCREENSHOT_DIR $XDG_PICTURES_DIR/screen
 set -gx SCREENRECORD_DIR $XDG_VIDEOS_DIR/screen
 
 # Find an editor
-for e in helix nvim vim vi nano
+for e in hx helix nvim vim vi nano
     type -q $e; or continue
     set -gx EDITOR $e
     break

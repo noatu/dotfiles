@@ -9,6 +9,16 @@ name = "tsx"
 auto-format = true
 
 [[language]]
+name = "html"
+indent = { tab-width = 4, unit = "    " }
+auto-format = false
+
+# [[language]]
+# name = "tera"
+# injection-regex = "html"
+# file-types = ["html"]
+
+[[language]]
 name = "markdown"
 [language.auto-pairs]
 '_' = '_'
@@ -44,11 +54,11 @@ include_md_extension_md_link = true # [File](file.md) or [File](file)
 [[language]]
 name = "toml"
 auto-format = true
-
-# TODO: still aligns
-[language-server.taplo.config]
-alignComments = false
-align_comments = false
+formatter = { command = "taplo", args = [
+  "format",
+  # "-oalign_comments=false",
+  "-",
+] }
 
 
 # [language-server.yaml-language-server.config.yaml]
@@ -79,7 +89,7 @@ exportPdf = "never"        # onSave, default: never
 
 [[language]]
 name = "env"
-file-types = ["conf"]
+file-types = ["conf", { glob = ".envrc" }]
 
 [[language]]
 name = "devicetree"
