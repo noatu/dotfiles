@@ -28,7 +28,11 @@ name = "markdown"
 '"' = '"'
 "'" = "'"
 # '`' = '`'
-# '<' = '>'
+
+[[language]]
+name = "markdown"
+language-servers = ["markdown-oxide", "vale-ls"]
+
 [language-server.markdown-oxide.config]
 unresolved_diagnostics = true
 include_md_extension_md_link = true # [File](file.md) or [File](file)
@@ -68,8 +72,9 @@ formatter = { command = "taplo", args = [
 # [language-server.yaml-language-server.config.yaml.schemas]
 # "" = "openapi.{yml,yaml}"
 
-# [[language]]
-# name = "nix"
+[[language]]
+name = "nix"
+auto-format = true
 # formatter = { command = "alejandra" }
 
 

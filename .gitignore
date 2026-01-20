@@ -28,6 +28,7 @@
 !.config/htop/
 !.config/tealdeer/
 !.config/direnv/
+!.config/vale/
 
 !.config/yazi/
 .config/yazi/*/

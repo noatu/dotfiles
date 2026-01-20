@@ -108,6 +108,12 @@ A-O = "open_above"
 A-e = "move_parent_node_end"
 A-b = "move_parent_node_start"
 
+C-p = [
+  ':insert-output set p (wl-paste -t text/html 2>/dev/null); and printf "$p" | html2text -b0 | head -c -2; or wl-paste --no-newline 2>/dev/null',
+  "append_mode",
+  "collapse_selection",
+]
+
 
 [keys.select]
 ";" = ["collapse_selection", "normal_mode"]
@@ -142,6 +148,8 @@ H = "goto_previous_buffer"
 C-l = "@:e<space><C-r>%<ret>:bc<ret>:<up><up><ret>" # move buffer to the end
 C-g = ":reset-diff-change"
 
+C-p = ':insert-output set p (wl-paste -t text/html 2>/dev/null); and printf "$p" | html2text -b0; or wl-paste --no-newline 2>/dev/null'
+
 # C-k = "jump_view_up"
 # C-h = "jump_view_left"
 # C-j = "jump_view_down"
@@ -171,6 +179,8 @@ L = "goto_next_buffer"
 H = "goto_previous_buffer"
 C-l = "@:e<space><C-r>%<ret>:bc<ret>:<up><up><ret>" # move buffer to the end
 C-g = ":reset-diff-change"
+
+C-p = ':insert-output set p (wl-paste -t text/html 2>/dev/null); and printf "$p" | html2text -b0; or wl-paste --no-newline 2>/dev/null'
 
 # C-q = "wclose"
 # C-k = "jump_view_up"
