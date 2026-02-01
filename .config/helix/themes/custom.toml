@@ -1,5 +1,10 @@
 inherits = "carbonfox"
 
+"ui.background" = { bg = "bg0" }
+"ui.cursorline.primary" = { bg = "bg2" }
+"ui.virtual.ruler" = { bg = "bg2" }
+
+
 warning = "magenta"
 error = "red"
 info = "blue"

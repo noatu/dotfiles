@@ -12,9 +12,9 @@ lto = true
 [profile.dev]
 opt-level = 1
 debug = "line-tables-only"
-codegen-backend = "cranelift"
-[unstable]
-codegen-backend = true
+# codegen-backend = "cranelift"
+# [unstable]
+# codegen-backend = true
 
 [profile.dev.package."*"]
 opt-level = 3

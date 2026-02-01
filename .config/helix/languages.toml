@@ -94,7 +94,7 @@ exportPdf = "never"        # onSave, default: never
 
 [[language]]
 name = "env"
-file-types = ["conf", { glob = ".envrc" }]
+file-types = ["conf", { glob = ".env*" }, { glob = "env.example" }]
 
 [[language]]
 name = "devicetree"
@@ -178,5 +178,8 @@ extraArgs = [
   # Use in production
   "-Aclippy::restriction", # lints which prevent the use of language and library features
   # Other
-  "-Aclippy::must_use_candidate", # must_use is rather annoing
+  "-Aclippy::must_use_candidate",   # must_use is rather annoing
+  "-Aclippy::cognitive_complexity",
+  "-Aclippy::too_many_lines",
+  "-Aclippy::missing_errors_doc",
 ]

@@ -3,6 +3,8 @@ gui:
   # One of 'rounded' (default) | 'single' | 'double' | 'hidden' | 'bold'
   border: single
 git:
+  autoFetch: false
+  overrideGpg: true
   pagers:
     - pager: delta --paging=never
     - pager: delta --paging=never --side-by-side --line-numbers

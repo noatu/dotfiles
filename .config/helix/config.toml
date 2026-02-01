@@ -109,7 +109,7 @@ A-e = "move_parent_node_end"
 A-b = "move_parent_node_start"
 
 C-p = [
-  ':insert-output set p (wl-paste -t text/html 2>/dev/null); and printf "$p" | html2text -b0 | head -c -2; or wl-paste --no-newline 2>/dev/null',
+  ':insert-output set p (wl-paste -t text/html 2>/dev/null); and printf "$p" | html2text -b0 | head -c -1; or wl-paste --no-newline 2>/dev/null',
   "append_mode",
   "collapse_selection",
 ]
