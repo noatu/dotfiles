@@ -29,6 +29,7 @@
 !.config/tealdeer/
 !.config/direnv/
 !.config/vale/
+!.config/bacon/
 
 !.config/yazi/
 .config/yazi/*/

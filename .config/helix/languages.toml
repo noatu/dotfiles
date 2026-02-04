@@ -63,7 +63,8 @@ formatter = { command = "taplo", args = [
   # "-oalign_comments=false",
   "-",
 ] }
-
+[language-server.taplo.config] # HACK: this single line fixes "this document has been excluded"
+# root_dir = [".git", "*.toml"]
 
 # [language-server.yaml-language-server.config.yaml]
 # format = { enable = true }
