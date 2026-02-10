@@ -70,6 +70,6 @@ base_volume = "100%" # global volume multiplier
 # r = "job:run"
 # ctrl-e = "export:analysis"
 
-[jobs.cl]
-command = ["cargo", "cl"]
+[jobs.clippy-all]
+command = ["cargo", "clippy-all"]
 need_stdout = false

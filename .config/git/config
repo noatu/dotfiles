@@ -18,6 +18,8 @@
     recurseSubmodules = check
 [merge]
     conflictStyle = zdiff3
+[rerere]
+    enabled = true
 [interactive]
     diffFilter = delta --color-only
 [delta]
