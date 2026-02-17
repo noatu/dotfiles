@@ -115,6 +115,8 @@ file-types = ["dts", "dtsi", "keymap"]
 # # defaultZephyrBindings = ["./zephyr/dts/bindings"]
 # # contexts = []
 
+[language-server.typescript-language-server.config]
+format = { indentSize = 4 }
 
 # [[language]]
 # name = "python"
