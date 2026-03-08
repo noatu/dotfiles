@@ -12,6 +12,7 @@ abbr mm -- mpv --profile=music --shuffle \$XDG_MUSIC_DIR
 
 abbr soc sea-orm-cli
 abbr lg lazygit
+abbr gd gh dash
 # abbr dots -- git --git-dir \~/.dotfiles/ --work-tree \~
 abbr gl git log
 abbr ga git add

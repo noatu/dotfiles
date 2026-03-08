@@ -161,14 +161,15 @@ command = "bacon-ls"
 [language-server.rust-analyzer.config]
 checkOnSave = true
 procMacro.enable = true
-cargo.features = "all"
 # for bacon
 # checkOnSave = { enable = false }
 # diagnostics = { enable = false }
 
-# [language-server.rust-analyzer.config.cargo]
-# loadOutDirsFromCheck = true
+[language-server.rust-analyzer.config.cargo]
+features = "all"
+targetDir = true
 # runBuildScripts = true
+# loadOutDirsFromCheck = true
 
 [language-server.rust-analyzer.config.check]
 features = "all"

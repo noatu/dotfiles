@@ -31,6 +31,10 @@
 !.config/vale/
 !.config/bacon/
 
+!.config/pgcli/
+.config/pgcli/*
+!.config/pgcli/config
+
 !.config/yazi/
 .config/yazi/*/
 
