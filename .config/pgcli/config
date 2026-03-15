@@ -240,7 +240,7 @@ fkr = "SELECT tc.table_name AS table, kcu.column_name AS column, ccu.table_name 
 
 idx = "SELECT indexname, indexdef FROM pg_indexes WHERE tablename = ANY(string_to_array('$1', ',')) ORDER BY tablename, indexname"
 checks = "SELECT tc.table_name, tc.constraint_name, cc.check_clause FROM information_schema.table_constraints tc JOIN information_schema.check_constraints cc ON tc.constraint_name = cc.constraint_name WHERE tc.constraint_type = 'CHECK' AND tc.table_name = ANY(string_to_array('$1', ','))"
-uniq = "SELECT tc.table_name, kcu.column_name FROM information_schema.table_constraints tc JOIN information_schema.key_column_usage kcu ON tc.constraint_name = kcu.constraint_name WHERE tc.constraint_type = 'UNIQUE' AND tc.table_name = ANY(string_to_array('$1', ','))"
+uniq = "SELECT cl.relname AS table, a.attname AS column, ix.relname AS index_name FROM pg_class cl JOIN pg_index i ON i.indrelid = cl.oid JOIN pg_class ix ON ix.oid = i.indexrelid JOIN pg_attribute a ON a.attrelid = cl.oid AND a.attnum = ANY(i.indkey) WHERE i.indisunique = true AND i.indisprimary = false AND cl.relname = ANY(string_to_array('$1', ',')) ORDER BY cl.relname, ix.relname"
 
 sizes = "SELECT relname AS table, pg_size_pretty(pg_total_relation_size(relid)) AS total, pg_size_pretty(pg_relation_size(relid)) AS data, pg_size_pretty(pg_total_relation_size(relid) - pg_relation_size(relid)) AS indexes FROM pg_catalog.pg_statio_user_tables ORDER BY pg_total_relation_size(relid) DESC"
 enums = "SELECT t.typname AS enum, e.enumlabel AS value FROM pg_type t JOIN pg_enum e ON t.oid = e.enumtypid JOIN pg_catalog.pg_namespace n ON n.oid = t.typnamespace ORDER BY t.typname, e.enumsortorder"

@@ -158,6 +158,10 @@ args = { program = "{0}", initCommands = [
 [language-server.bacon-ls]
 command = "bacon-ls"
 
+[language-server.rust-analyzer]
+command = "lspmux"
+# args = ["client", "--server-path", "rust-analyzer"]
+
 [language-server.rust-analyzer.config]
 checkOnSave = true
 procMacro.enable = true
@@ -188,9 +192,9 @@ extraArgs = [
   "-Aclippy::cargo",       # lints for the cargo manifest
   "-Aclippy::restriction", # lints which prevent the use of language and library features
   # Specific
-  "-Aclippy::must_use_candidate",           # must_use is rather annoing
+  "-Aclippy::must_use_candidate",   # must_use is rather annoing
   "-Aclippy::cognitive_complexity",
   "-Aclippy::too_many_lines",
   "-Aclippy::missing_errors_doc",
-  "-Aclippy::from_iter_instead_of_collect", # formats better
+  # "-Aclippy::from_iter_instead_of_collect", # formats better
 ]

@@ -20,6 +20,16 @@
 !/.config/
 /.config/*
 
+# Daemon
+
+!.config/systemd/
+.config/systemd/*
+!.config/systemd/user/
+.config/systemd/user/*
+!.config/systemd/user/lspmux.s*
+
+!.config/lspmux/
+
 # CLI / TUI
 !.config/gdu/
 !.config/fish/

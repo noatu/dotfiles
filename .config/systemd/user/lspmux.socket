@@ -1,0 +1,10 @@
+[Unit]
+Description=lspmux socket
+# StopWhenUnneeded=yes
+
+[Socket]
+ListenStream=%t/lspmux.sock
+SocketMode=0600
+
+# [Install]
+# WantedBy=sockets.target
