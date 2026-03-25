@@ -230,7 +230,7 @@ d = ":toggle inline-diagnostics.cursor-line disable warning"
 D = ":toggle inline-diagnostics.other-lines disable error"
 l = ":lsp-stop"
 L = ":lsp-restart"
-A-l = ":run-shell-command lspmux reload"
+A-l = ":run-shell-command systemctl --user restart lspmux.service"
 
 # t = [":toggle cursorline", ":toggle line-number absolute relative"]
 # https://github.com/helix-editor/helix/issues/13187

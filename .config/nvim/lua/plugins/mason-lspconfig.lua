@@ -1,6 +1,7 @@
 return {
     "mason-org/mason-lspconfig.nvim",
     -- event = "BufReadPre",
+    enabled = false,
     event = "User LazyFile",
     dependencies = { -- load those first
         {
