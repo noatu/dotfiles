@@ -15,6 +15,7 @@ set -gx XDG_DOWNLOAD_DIR /tmp
 
 set -gx GOPATH $XDG_DATA_HOME/go # GOOUT my home
 set -gx CARGO_HOME $XDG_DATA_HOME/cargo
+# set -gx CARGO_TARGET_DIR ~/.exclude/cargo # bad idea
 set -gx CLIPPY_CONF_DIR $XDG_DATA_HOME/cargo/
 
 # Can't use '~' in universal variables

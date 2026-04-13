@@ -3,7 +3,7 @@
 [fetch]
     prune = true
 [core]
-    editor = helix
+    editor = hx
     pager = delta
 [diff]
     tool = nvimdiff
@@ -50,7 +50,8 @@
 #     gpgsign = true
 [includeIf "gitdir:~/src/"]
     path = ~/src/.gitconfig
-
+[includeIf "gitdir:~/uni/"]
+    path = ~/uni/.gitconfig
 
 # [filter "lfs"]
 # 	required = true

@@ -105,7 +105,7 @@ end)
 Lmap("lcs", "Show",    diag.show)
 Lmap("lch", "Hide",    diag.hide)
 Lmap("lce", "Enable",  diag.enable)
-Lmap("lcd", "Disable", diag.disable)
+-- Lmap("lcd", "Disable", diag.disable)
 -- List
 Lmap("lld", "Diagnostics all Q", diag.setqflist)
 Lmap("llD", "Diagnostics buf L", diag.setloclist)

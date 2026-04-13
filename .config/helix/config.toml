@@ -15,6 +15,7 @@ auto-format = true
 auto-info = true           # TODO: idle-timeout?
 # true-color = true
 # undercurl = true
+# terminal-background-color = true
 rulers = [80, 100]
 bufferline = "multiple"                  # never, always, multiple
 color-modes = false                      # mode indicator color
