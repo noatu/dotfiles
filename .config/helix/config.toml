@@ -57,7 +57,8 @@ right = [
 
 [editor.lsp]
 display-progress-messages = true # looks cool
-auto-signature-help = true
+auto-signature-help = false
+auto-document-highlight = false
 display-inlay-hints = false      # meh
 
 [editor.cursor-shape]
@@ -225,10 +226,12 @@ n = ":toggle line-number absolute relative"
 b = ":toggle bufferline never multiple"
 r = ":toggle rulers [] [80,100]"
 g = ":toggle indent-guides.render"
-i = ":toggle lsp.display-inlay-hints"
 e = ":toggle end-of-line-diagnostics disable hint"
 d = ":toggle inline-diagnostics.cursor-line disable warning"
 D = ":toggle inline-diagnostics.other-lines disable error"
+s = ":toggle lsp.auto-signature-help"
+h = ":toggle lsp.auto-document-highlight"
+i = ":toggle lsp.display-inlay-hints"
 l = ":lsp-stop"
 L = ":lsp-restart"
 A-l = ":run-shell-command systemctl --user restart lspmux.service"
