@@ -58,8 +58,8 @@ right = [
 [editor.lsp]
 display-progress-messages = true # looks cool
 auto-signature-help = false
-auto-document-highlight = false
-display-inlay-hints = false      # meh
+# auto-document-highlight = false
+display-inlay-hints = false # meh
 
 [editor.cursor-shape]
 normal = "block"

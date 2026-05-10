@@ -22,7 +22,7 @@ cached_source direnv hook fish
 
 status is-interactive; or return
 cached_source zoxide init fish
-cached_source trashy completions fish
-cached_source sqlx completions fish
+# cached_source trashy completions fish
+# cached_source sqlx completions fish
 
-cached_source_static zmk --show-completion
+# cached_source_static zmk --show-completion
