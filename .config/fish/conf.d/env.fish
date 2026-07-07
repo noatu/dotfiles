@@ -45,6 +45,8 @@ type -q nvim; and set -gx MANPAGER nvim +Man!
 test -S ~/.bitwarden-ssh-agent.sock
 and set -gx SSH_AUTH_SOCK ~/.bitwarden-ssh-agent.sock
 
+set -gx TELEPORT_ADD_KEYS_TO_AGENT no
+
 # SSH with GPG
 # set -e SSH_AGENT_PID
 # set -gx GPG_TTY (tty)
