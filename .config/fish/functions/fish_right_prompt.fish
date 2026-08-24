@@ -1,3 +1,7 @@
+function __fix_right_prompt_reflow --on-event fish_postexec
+    set -e __fish_right_prompt
+end
+
 function fish_right_prompt
     # Detect reflow from window size change
     if test "$__fish_right_prompt_term_dimensions" != "$COLUMNS$LINES"

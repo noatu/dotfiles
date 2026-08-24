@@ -5,9 +5,10 @@ gui:
 git:
   autoFetch: false
   overrideGpg: true
-  pagers:
-    - pager: delta --paging=never
-    - pager: delta --paging=never --side-by-side --line-numbers
+  diffRenderers:
+    - command: delta --paging=never
+    - command: delta --paging=never --side-by-side --line-numbers
     # - externalDiffCommand: difft --color=always --display=inline --context=5
-    - externalDiffCommand: difft --color=always --context=5
-    # colorArg: always
+    - command: difft --color=always --context=5
+      type: extDiff
+  # colorArg: always

@@ -1,3 +1,7 @@
+function __fix_prompt_reflow --on-event fish_postexec
+    set -e __fish_prompt
+end
+
 function fish_prompt --description 'Write out the prompt'
     # Save those before running anything
     set -l last_pipestatus $pipestatus
