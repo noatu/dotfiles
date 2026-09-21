@@ -40,6 +40,10 @@ hl.config({
         enabled = false, -- animations actually look better that way
     },
 
+    cursor = {
+        default_monitor = "DP-6",
+    },
+
     input = {
         kb_layout  = "us,ua",
         kb_variant = "colemak,",

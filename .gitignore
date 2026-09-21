@@ -40,6 +40,10 @@
 !.config/vale/
 !.config/bacon/
 
+!.config/htop/
+.config/htop/*
+!.config/htop/htoprc
+
 !.config/pgcli/
 .config/pgcli/*
 !.config/pgcli/config
