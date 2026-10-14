@@ -30,6 +30,10 @@ other-lines = "error"
 prefix-len = 1
 max-diagnostics = 5     # 10
 
+[editor.workspace-trust]
+level = "none"
+prompt = false
+
 [editor.statusline]
 mode = { normal = "N", insert = "I", select = "S" }
 left = [

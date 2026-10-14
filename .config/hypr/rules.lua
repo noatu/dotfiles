@@ -32,7 +32,7 @@ end
 -- Muh privacy
 hl.layer_rule({ match = { namespace = [[^(notifications)$]] }, no_screen_share = true })
 hl.window_rule({
-    match = { class = [[^(Bitwarden|veracrypt|nheko|vesktop|org\.telegram\.desktop|com\.obsproject\.Studio)$]] },
+    match = { class = [[^([Bb]itwarden|veracrypt|nheko|vesktop|org\.telegram\.desktop|com\.obsproject\.Studio)$]] },
     no_screen_share = true,
 })
 

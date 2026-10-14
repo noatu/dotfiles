@@ -2,13 +2,13 @@ promptToReturnFromSubprocess: false
 gui:
   # One of 'rounded' (default) | 'single' | 'double' | 'hidden' | 'bold'
   border: single
+  showFileTree: false
 git:
   autoFetch: false
   overrideGpg: true
   diffRenderers:
     - command: delta --paging=never
     - command: delta --paging=never --side-by-side --line-numbers
-    # - externalDiffCommand: difft --color=always --display=inline --context=5
+    # - command: difft --color=always --display=inline --context=5
     - command: difft --color=always --context=5
       type: extDiff
-  # colorArg: always
